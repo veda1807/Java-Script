@@ -1,0 +1,161 @@
+body{
+    background-image: url('https://media.discordapp.net/attachments/806380420320985108/806383710055956510/bg.jpg?width=551&height=345');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+    cursor: none;
+}
+
+#keys{
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    width: 100%;
+    height: 55%;
+}
+
+#piano{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    font-size: 100px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#piano1{background-color: #ff0000;}
+#piano2{background-color: #ffff00;}
+#piano3{background-color: #00ff00;}
+#piano4{background-color: #0000ff;}
+#piano5{background-color: #d000ff;}
+
+.white{
+    background-color: #ffffff;
+    height: 95%;
+    width: 5%;
+    border-radius: 5px;
+    position: absolute;
+    color: #000000;
+}
+
+.black{
+    background-color: #000000;
+    position: absolute;
+    height: 60%;
+    width: 4%;
+    border-radius: 5px;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.hint{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#a_c{
+    left: 7%;
+}
+
+#w_cc{
+    left: 10%;
+}
+
+#s_d{
+    left: 12.2%;
+}
+
+#e_dd{
+    left: 15.3%;
+}
+
+#d_e{
+    left: 17.4%;
+}
+
+#f_f{
+    left: 22.6%;
+}
+
+#t_ff{
+    left: 25.5%;
+}
+
+#g_g{
+    left: 27.8%;
+}
+
+#y_gg{
+    left: 31%;
+}
+
+#h_a{
+    left: 33%;
+}
+
+#u_aa{
+    left: 36.1%;
+}
+
+#j_b{
+    left: 38.2%;
+}
+
+#k_c{
+    left: 43.4%;
+}
+
+#o_cc{
+    left: 46.5%;
+}
+
+#l_d{
+    left: 48.6%;
+}
+
+#p_dd{
+    left: 51.6%;
+}
+
+#_e{
+    left: 53.8%;
+}
+
+
+.animate_white{
+    animation: animation_1 0.1s;
+}
+
+@keyframes animation_1{
+    0% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #6f6f6f;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+.animate_black{
+    animation: animation_2 0.1s;
+}
+
+@keyframes animation_2{
+    0% {
+        background-color: #000000;
+    }
+    50% {
+        background-color: #505050;
+    }
+    100% {
+        background-color: #000000;
+    }
+}

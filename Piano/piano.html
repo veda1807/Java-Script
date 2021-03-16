@@ -1,0 +1,223 @@
+<head>
+
+    <style type="text/css">
+    body{
+    background-image: url('https://media.discordapp.net/attachments/806380420320985108/806383710055956510/bg.jpg?width=551&height=345');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+    cursor: none;
+}
+/* white and black strokes position and size */
+#keys{    
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    width: 100%;
+    height: 55%;
+}
+/* topside Piano text */
+#piano{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    font-size: 100px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* piano text colors */
+#piano1{background-color: #ff0000;}
+#piano2{background-color: #ffff00;}
+#piano3{background-color: #00ff00;}
+#piano4{background-color: #0000ff;}
+#piano5{background-color: #d000ff;}
+/* white strokes */
+.white{
+    background-color: #ffffff;
+    height: 95%;
+    width: 5%;
+    border-radius: 5px;
+    position: absolute;
+    color: #000000;
+}
+/* black strokes */
+.black{
+    background-color: #000000;
+    position: absolute;
+    height: 60%;
+    width: 4%;
+    border-radius: 5px;
+    z-index: 3;
+    color: #ffffff;
+}
+/* text size and position on strokes */
+.hint{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    font-size: xx-large;
+}
+/* individual text alignments  */
+#a_c{
+    left: 7%;
+}
+
+#w_cc{
+    left: 10%;
+}
+
+#s_d{
+    left: 12.2%;
+}
+
+#e_dd{
+    left: 15.3%;
+}
+
+#d_e{
+    left: 17.4%;
+}
+
+#f_f{
+    left: 22.6%;
+}
+
+#t_ff{
+    left: 25.5%;
+}
+
+#g_g{
+    left: 27.8%;
+}
+
+#y_gg{
+    left: 31%;
+}
+
+#h_a{
+    left: 33%;
+}
+
+#u_aa{
+    left: 36.1%;
+}
+
+#j_b{
+    left: 38.2%;
+}
+
+#k_c{
+    left: 43.4%;
+}
+
+#o_cc{
+    left: 46.5%;
+}
+
+#l_d{
+    left: 48.6%;
+}
+
+#p_dd{
+    left: 51.6%;
+}
+
+#_e{
+    left: 53.8%;
+}
+
+/* strokes blinks here */
+.animate_white{
+    animation: animation_1 0.1s; 
+}
+
+/* color while stroke blinking */
+@keyframes animation_1{
+    0% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #6f6f6f;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+.animate_black{
+    animation: animation_2 0.1s;
+}
+
+@keyframes animation_2{
+    0% {
+        background-color: #000000;
+    }
+    50% {
+        background-color: #505050;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+    </style>
+</head>
+
+<body>
+   
+   <!-- letters on plane color boxes -->
+    <div id="piano">
+        <b id="piano1">P</b>
+        <b id="piano2">I</b>
+        <b id="piano3">A</b>
+        <b id="piano4">N</b>
+        <b id="piano5">O</b>
+    </div>
+    
+    <!-- Keys on white and black strokes -->
+    <div id="keys">
+    
+        <div id="a_c" class="white"><div class="hint">A</div></div>
+        <div id="w_cc" class="black"><div class="hint">W</div></div>
+        <div id="s_d" class="white"><div class="hint">S</div></div>
+        <div id="e_dd" class="black"><div class="hint">E</div></div>
+        <div id="d_e" class="white"><div class="hint">D</div></div>
+        <div id="f_f" class="white"><div class="hint">F</div></div>
+        <div id="t_ff" class="black"><div class="hint">T</div></div>
+        <div id="g_g" class="white"><div class="hint">G</div></div>
+        <div id="y_gg" class="black"><div class="hint">Y</div></div>
+        <div id="h_a" class="white"><div class="hint">H</div></div>
+        <div id="u_aa" class="black"><div class="hint">U</div></div>
+        <div id="j_b" class="white"><div class="hint">J</div></div>
+        <div id="k_c" class="white"><div class="hint">K</div></div>
+        <div id="o_cc" class="black"><div class="hint">O</div></div>
+        <div id="l_d" class="white"><div class="hint">L</div></div>
+        <div id="p_dd" class="black"><div class="hint">P</div></div>
+        <div id="_e" class="white"><div class="hint">;</div></div>
+    
+    <!-- audio links for the white and black strokes -->
+        <audio id="a" src="https://cdn.discordapp.com/attachments/806380420320985108/806380474791362570/C_-_A_-_65.wav"></audio>
+        <audio id="w" src="https://cdn.discordapp.com/attachments/806380420320985108/806380721492459520/CC_-_W_-_87.wav"></audio>
+        <audio id="s" src="https://cdn.discordapp.com/attachments/806380420320985108/806380912006660096/D_-_S_-_83.wav"></audio>
+        <audio id="e" src="https://cdn.discordapp.com/attachments/806380420320985108/806381014251077672/DD_-_E_-_69.wav"></audio>
+        <audio id="d" src="https://cdn.discordapp.com/attachments/806380420320985108/806381819602927616/E_-_D_-_68.wav"></audio>
+        <audio id="f" src="https://cdn.discordapp.com/attachments/806380420320985108/806381920006307870/F_-_F_-_70.wav"></audio>
+        <audio id="t" src="https://cdn.discordapp.com/attachments/806380420320985108/806381998087733308/FF_-_T_-_84.wav"></audio>
+        <audio id="g" src="https://cdn.discordapp.com/attachments/806380420320985108/806382077318529117/G_-_G_-_71.wav"></audio>
+        <audio id="y" src="https://cdn.discordapp.com/attachments/806380420320985108/806382155960680458/GG_-_Y_-_89.wav"></audio>
+        <audio id="h" src="https://cdn.discordapp.com/attachments/806380420320985108/806382239414747166/A_-_H_-_72.wav"></audio>
+        <audio id="u" src="https://cdn.discordapp.com/attachments/806380420320985108/806382341932056586/AA_-_U_-_85.wav"></audio>
+        <audio id="j" src="https://cdn.discordapp.com/attachments/806380420320985108/806382427781857290/B_-_J_-_74.wav"></audio>
+        <audio id="k" src="https://cdn.discordapp.com/attachments/806380420320985108/806382846812880916/C_-_K_-_75.wav"></audio>
+        <audio id="o" src="https://cdn.discordapp.com/attachments/806380420320985108/806382858913972224/CC_-_O_-_79.wav"></audio>
+        <audio id="l" src="https://cdn.discordapp.com/attachments/806380420320985108/806382733500743690/D_-_L_-_76.wav"></audio>
+        <audio id="p" src="https://cdn.discordapp.com/attachments/806380420320985108/806382618496598016/DD_-_P_-_80.wav"></audio>
+        <audio id="_" src="https://cdn.discordapp.com/attachments/806380420320985108/806382522153173012/E_-___-_186.wav"></audio>
+    
+    </div>
+    
+        <script src="piano.js"></script>
+    </body>
