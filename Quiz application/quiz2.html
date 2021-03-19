@@ -1,0 +1,74 @@
+<html>
+    <head>
+<script type="text/javascript" src="quiz.js"></script>
+    </head>
+    <link rel="stylesheet" href="quiz.css">
+    <style>
+              body{
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+    </style>
+    <body onload="loadfunc()" style="padding-top: 23%; margin-left: 20%;">
+        
+        <div style="width:40%; border: 60%; margin: auto; padding-left: 4px;">
+
+
+
+        <form action="quiz3.html" onsubmit="scorecard()">
+        <h1>Question 2:</h1>
+        <h1>Who is the first batsman to cross 10000 runs in Tests</h1> 
+        <input type="radio" id="answer1" value="Dravid" name="a">
+        <label>Dravid</label><br>
+
+
+        <input type="radio" id="answer2" value="Sachin" name="a">
+        <label >Sachin</label><br>
+
+
+        <input type="radio"  id="answer1"  value="Sunil Gavaskar" name="a">
+        <label >Sunil Gavaskar</label><br>
+         <input style="padding: 12px;margin-left:2%;color: #fff;background: #32cd9f;border-radius: 10px;border-color: #32cd32;"style="padding: 12px;margin-left:2%;color: #fff;background: #32cd9f;border-radius: 10px;border-color: #32cd32;" type="submit" name="submit">
+        <!-- sunil gavaskar<input type="submit" value=""> -->
+    </form>
+
+    <script> 
+    var ans="Sunil Gavaskar";
+    function loadfunc(){
+            localStorage.setItem("question2",ans)
+        }
+
+    function scorecard()
+    
+        {
+            // var score=0;
+            var togetele = document.getElementsByName("a"); // list of radio buttons
+            // var val = localStorage.getItem('q1'); // local storage value
+
+            for(var i=0;i<togetele.length;i++){
+                var opt=togetele[i].value;
+                // console.log(opt)
+                if(togetele[i].checked){
+                    givenans=togetele[i].value;
+                    localStorage.setItem("myoption2",givenans)
+                    console.log(togetele[i].value);
+                    if(ans==givenans){
+                        score=localStorage.getItem("score");
+                        score++;
+                        score=score.toString();
+                        localStorage.setItem("score",score)
+
+            }
+
+                }
+            }
+        }
+
+
+    </script>
+        
+       </div>
+    </body>
+
+</html>

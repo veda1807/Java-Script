@@ -1,0 +1,72 @@
+<html>
+    <head>
+<script type="text/javascript" src="quiz.js"></script>
+    </head>
+    <link rel="stylesheet" href="quiz.css">
+    <style>
+              body{
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+    </style>
+    <body onload="loadfunc()" style="padding-top: 23%; margin-left: 20%;">
+        
+        <div style="width:40%; border: 60%; margin: auto; padding-left: 4px;">
+
+
+            <form action="quiz8.html" onsubmit="scorecard()">
+        <h1>Question 7:</h1>
+        <h1>Who become the first cricketer to win three top ICC honours in the same year?</h1> 
+        <input type="radio" id="answer1" value="Rohit Sharma" name="a">
+        <label>Rohit Sharma</label><br>
+
+
+        <input type="radio"  id="answer2" value="Virat Kohli" name="a">
+        <label>Virat Kohli</label><br> 
+
+
+        <input type="radio"  id="answer3" value="Warner" name="a">
+        <label>Warner</label><br>
+        <input style="padding: 12px;margin-left:2%;color: #fff;background: #32cd9f;border-radius: 10px;border-color: #32cd32;"style="padding: 12px;margin-left:2%;color: #fff;background: #32cd9f;border-radius: 10px;border-color: #32cd32;" type="submit" name="submit">
+        <!-- <inputv  virat type="submit" value="Submit"> -->
+    </form>
+
+    <script> 
+        var ans="Virat Kohli";
+        function loadfunc(){
+                localStorage.setItem("question7",ans)
+            }
+    
+        function scorecard()
+        
+            {
+              
+                var togetele = document.getElementsByName("a"); 
+    
+                for(var i=0;i<togetele.length;i++){
+                    var opt=togetele[i].value;
+                    // console.log(opt)
+                    if(togetele[i].checked){
+                        givenans=togetele[i].value;
+                        localStorage.setItem("myoption7",givenans)
+                        console.log(togetele[i].value)
+                        if(ans==givenans){
+                            score=localStorage.getItem("score")
+                            score++;
+                            score=score.toString();
+                            localStorage.setItem("score",score)
+    
+                }
+    
+                    }
+                }
+            }
+    
+    
+        </script>
+        
+       </div>
+    </body>
+
+</html>
