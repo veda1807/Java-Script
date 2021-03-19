@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function loadDoc() {
+			var getJSON = function(url, callback) {
+	    		var xhr = new XMLHttpRequest();
+	    		xhr.open('GET', "test.json", true);
+	    		xhr.responseType = 'json';
+	    		xhr.onload = function() {
+		      		var status = xhr.status;
+		      		if (status === 200) {
+		        		callback(null, xhr.response);
+		        		alert(xhr.responseText);
+		      		} else {
+		        		callback(status, xhr.response);
+		      		}
+		    	};
+		    	xhr.send();
+			};
+		}
+	</script>
+</head>
+<body>
+	<p id="demo"></p>
+	<button onclick="loadDoc()">Click Me!!!</button>
+</body>
+</html>

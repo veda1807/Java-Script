@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<head>
+	<title></title>
+	
+</head>
+<body>
+    <form id="data1"  >
+    
+    </form>
+	<button onclick="loadDoc()">Click Me!!!</button>
+    <button onclick="score()">Submit</button>
+    <script type="text/javascript">
+        function loadDoc() {
+            var str = "";
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', "quiz.json", true);
+            xhr.responseType = 'json';
+            xhr.onload = function()
+            {
+            var status = xhr.status;
+                if (status === 200) 
+                { 
+                    for(i=0;i<xhr.response.length;i++){
+                        str += "<div id='q" + i + "'><p id='id" + i + "'>" + xhr.response[i][i+1] + "</p>" + 
+                                "<input type='radio'  name='answers"+i+"'+  id='ans" + i + "' value='" + xhr.response[i]["a"] + "'>" +"<label>" + xhr.response[i]["a"] + "</label><br>" + 
+                                "<input type='radio'  name='answers"+i+"' id='ans" + i + "' value='" + xhr.response[i]["b"] + "'>" +"<label>" + xhr.response[i]["b"] + "</label><br>" + 
+                                "<input type='radio'  name='answers"+i+"' id='ans" + i + "' value='" + xhr.response[i]["c"] + "'>" +"<label>" + xhr.response[i]["c"] + "</label><br>" + 
+                                // "<input type='radio'  name='answers"+i+"' id='ans" + i + "' value='" + xhr.response[i]["d"] + "'>" +"<label>" + xhr.response[i]["d"] + "</label><br>" + 
+                                "</div><br>"
+                            
+                        // var radios = document.getElementsByName('"answer"+i');
+                        // for(var j=0;j<radios.length;j++){
+                        //     var opt=radios[j].value;
+                        //     // console.log(opt)
+                        //     if(radios[j].checked){
+                        //         console.log(radios[j].value)
+                            
+                         
+                        //     }
+                        // }
+
+                    //    st="<input type='submit'value='submit'>"   
+                    //    document.getElementById("data1").innerHTML = st;  
+                    }
+                    // var data=JSON.parse(str.responseText);
+                    document.getElementById("data1").innerHTML =str;
+
+                    // document.getElementById("data1").innerHTML = str[0];
+    
+                    // for(i=0;i<xhr.response.length;i++){ 
+                        
+                    //     for( ch = 'a' ; ch <= 'd' ; ch++ ){
+                            
+                    //         if( xhr.response[i][ch].checked)
+
+                    //     }
+                    // }
+                    
+                } 
+                else 
+                {
+                // callback(status, xhr.response);
+            }
+        };
+        xhr.send();
+    
+        }
+		
+    </script>
+	
+	<input type="submit" name="submit">
+	
+
+</body>
+</html>

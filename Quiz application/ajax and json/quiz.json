@@ -1,0 +1,82 @@
+[
+    {
+        "1" :"Who won the world cup,1975?",
+        "a":"West Indies",
+        "b":"Australia",
+        "c":"Srilanka",
+        "answer":"West Indies"
+    
+    },
+    {
+        "2" :"Who is the first batsman to cross 10000 runs in Tests",
+        "a":"Dravid",
+        "b":"Sachin",
+        "c":"Sunil Gavaskar",  
+        "answer":"Sunil Gavaskar"
+    
+    },
+    {
+        "3" :"Who is the ICC ODI Cricketer of the Year for 2019 ?",
+        "a":"Virat Kohli",
+        "b":"Rohit Sharma",
+        "c":"Dhoni",   
+        "answer":"Rohit Sharma"
+    
+    },
+    {
+        "4" :"Who become the first cricketer to win three top ICC honours in the same year?",
+        "a":"Virat Kohli",
+        "b":"Rohit Sharma",
+        "c":"KL Rahul",
+        "answer":"Virat Kohli"
+    
+    },
+    {
+        "5" :"In which year was Sachin Tendulkar given the Arjuna Award?",
+        "a":"1998",
+        "b":"1994",
+        "c":"1996",
+        "answer":"1994"
+    
+    },
+    {
+        "6" :"Which of the following is the first woman cricketer who scored 6000 runs in ODIs?",
+        "a":"Harmanpreet Kaur",
+        "b":"Smrithi Mandhana",
+        "c":"Mithali Raj",
+        "answer":"Mithali Raj"
+    
+    },
+     {
+        "7" :"Who become the first cricketer to win three top ICC honours in the same year?",
+        "a":"Rohit Sharma",
+        "b":"Virat Kohli",
+        "c":"Warner",
+        "answer":"Virat Kohli"
+    
+    },
+    {
+        "8" :"The Deodhar Trophy is associated with the game of ?",
+        "a":"Foot ball",
+        "b":"Cricket",
+        "c":"Hockey",
+        "answer":"Cricket"
+    
+    },
+    {
+        "9" :"Which famous Indian player has been inducted into the ICC Hall of Fame in 2018 ?",
+        "a":"Rahul Dravid",
+        "b":"Kapil dev",
+        "c":"Sehwag",
+        "answer":"Rahul Dravid"
+    
+    },
+    {
+        "10" :"Who among the following has scored first double century in World Cup Cricket?",
+        "a":"Sangakkara",
+        "b":"Chris Gayle",
+        "c":"Duplesis",
+        "answer":"Chris Gayle"
+    
+    }
+    ]
